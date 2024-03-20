@@ -5,6 +5,7 @@ const process = require("node:process")
 
 if (process.argv.length < 3) {
   console.error("Usage: node index.js <image.gif>")
+  process.exit(1)
 }
 (async () => {
   const imageContents = fs.readFileSync(process.argv[2])
